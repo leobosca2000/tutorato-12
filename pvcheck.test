@@ -1,0 +1,282 @@
+# File di test per la prova di laboratorio del 2/7/2018 (chiavetta
+  distributore).
+
+
+######################################################################
+
+[.TEST]
+Solo una ricarica
+
+[.ARGS]
+.FILE
+
+[.FILE]
+1 RICARICA 100
+
+[RESIDUO]
+100
+
+[MASSIMO]
+100
+
+[RICARICHE]
+100
+
+[CAFFE]
+0
+
+######################################################################
+
+[.TEST]
+Due ricariche
+
+[.ARGS]
+.FILE
+
+[.FILE]
+1 RICARICA 50
+2 RICARICA 100
+
+[RESIDUO]
+150
+
+[MASSIMO]
+150
+
+[RICARICHE]
+50
+100
+
+[CAFFE]
+0
+
+######################################################################
+
+[.TEST]
+Un caffe
+
+[.ARGS]
+.FILE
+
+[.FILE]
+111 RICARICA 50
+222 CAFFE 50
+
+[RESIDUO]
+0
+
+[MASSIMO]
+50
+
+[RICARICHE]
+50
+
+[CAFFE]
+1
+
+######################################################################
+
+[.TEST]
+Due ricariche
+
+[.ARGS]
+.FILE
+
+[.FILE]
+111 RICARICA 100
+222 CAPPUCCINO 50
+333 RICARICA 50
+
+[RESIDUO]
+100
+
+[MASSIMO]
+100
+
+[RICARICHE]
+100
+
+[CAFFE]
+0
+
+######################################################################
+
+[.TEST]
+Sette eventi
+
+[.ARGS]
+.FILE
+
+[.FILE]
+10000 RICARICA 100
+10010 CAPPUCCINO 40
+10100 RICARICA 50
+10200 RICARICA 50
+10300 CAFFE 60
+10400 CAFFE 60
+10500 RICARICA 100
+
+[RESIDUO]
+140
+
+[MASSIMO]
+160
+
+[RICARICHE]
+50
+50
+
+[CAFFE]
+2
+
+######################################################################
+
+[.TEST]
+Cinque caffe
+
+[.ARGS]
+.FILE
+
+[.FILE]
+10000 RICARICA 200
+20000 CAFFE 40
+20500 CAFFE 40
+21500 CAFFE 40
+30000 CAFFE 40
+30100 CAFFE 40
+
+[RESIDUO]
+0
+
+[MASSIMO]
+200
+
+[RICARICHE]
+200
+
+[CAFFE]
+3
+
+######################################################################
+
+[.TEST]
+Tante ricariche
+
+[.ARGS]
+.FILE
+
+[.FILE]
+11000 RICARICA 100
+12000 CAFFE 50
+13000 RICARICA 50
+14000 RICARICA 50
+15000 CAPPUCCINO 100
+16000 RICARICA 20
+17000 RICARICA 50
+18000 RICARICA 100
+
+[RESIDUO]
+220
+
+[MASSIMO]
+220
+
+[RICARICHE]
+20
+50
+100
+
+[CAFFE]
+1
+
+######################################################################
+
+[.TEST]
+Tante ricariche
+
+[.ARGS]
+.FILE
+
+[.FILE]
+11000 RICARICA 100
+12000 CAFFE 50
+13000 RICARICA 50
+14000 RICARICA 50
+15000 CAPPUCCINO 100
+16000 RICARICA 20
+17000 RICARICA 50
+18000 RICARICA 100
+
+[RESIDUO]
+220
+
+[MASSIMO]
+220
+
+[RICARICHE]
+20
+50
+100
+
+[CAFFE]
+1
+
+######################################################################
+
+[.TEST]
+Esempio nel testo
+
+[.ARGS]
+.FILE
+
+[.FILE]
+89132840 RICARICA 50
+89132848 RICARICA 200
+89132851 MOCACCINO 50
+89240532 CAFFE 50
+89240542 CAPPUCCINO 60
+89304867 RICARICA 20
+
+[RESIDUO]
+110
+
+[MASSIMO]
+250
+
+[RICARICHE]
+50
+200
+
+[CAFFE]
+1
+
+######################################################################
+
+[.TEST]
+File distribuito all'esame
+
+[.ARGS]
+chiavetta.txt
+
+[RESIDUO]
+360
+
+[MASSIMO]
+665
+
+[RICARICHE]
+5
+20
+10
+20
+5
+10
+100
+20
+5
+200
+
+[CAFFE]
+3
+
+######################################################################
